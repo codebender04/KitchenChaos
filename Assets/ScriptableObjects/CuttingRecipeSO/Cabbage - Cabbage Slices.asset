@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2694bd685231852459d8d7c12b887d2b, type: 3}
   m_Name: Cabbage - Cabbage Slices
   m_EditorClassIdentifier: 
-  input: {fileID: 0}
-  output: {fileID: 0}
+  input: {fileID: 11400000, guid: 18d5e51324cdbd840b80d8cddb0ff0dc, type: 2}
+  output: {fileID: 11400000, guid: 3d87b859cfbaa98498338023cba0ff29, type: 2}
