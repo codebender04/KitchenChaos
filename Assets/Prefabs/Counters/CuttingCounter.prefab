@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 5014830384015029234}
   - component: {fileID: 2659153062408422715}
   - component: {fileID: 4765883191019543007}
+  - component: {fileID: 7015199135142140306}
   m_Layer: 5
   m_Name: ProgressBarUI
   m_TagString: Untagged
@@ -209,6 +210,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barImage: {fileID: 7774159570765688481}
   cuttingCounter: {fileID: 5707031743109831290}
+--- !u!114 &7015199135142140306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2717213051022296181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8992facbc92867c44ad90b3d99acd905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
 --- !u!1 &7432917229939361965
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +478,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5707031743109831290}
+    - targetCorrespondingSourceObject: {fileID: 6985693558848805614, guid: 85d675f6cdd05d0479dafd210a5a778a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6007639873950583776}
   m_SourcePrefab: {fileID: 100100000, guid: 85d675f6cdd05d0479dafd210a5a778a, type: 3}
 --- !u!4 &1007223185520266677 stripped
 Transform:
@@ -497,6 +515,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kitchenObjectHoldPoint: {fileID: 1007223185520266677}
   cuttingRecipeSOArray: []
+--- !u!114 &6007639873950583776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2924870088608343461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8992facbc92867c44ad90b3d99acd905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
 --- !u!1001 &7940107818550683492
 PrefabInstance:
   m_ObjectHideFlags: 0
