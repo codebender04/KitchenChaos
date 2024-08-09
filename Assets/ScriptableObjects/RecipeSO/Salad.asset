@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: Salad
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: 7187db8b721a3a14c8741ad9da83ddfa, type: 2}
-  - {fileID: 11400000, guid: 6c180bcd169b3684090be2cd4c8122d8, type: 2}
-  - {fileID: 11400000, guid: 00e072c77ae281447ba9d48e37b1a317, type: 2}
-  - {fileID: 11400000, guid: 36e5e0c7432cc8c46968c84c3e795cc3, type: 2}
   - {fileID: 11400000, guid: 3d87b859cfbaa98498338023cba0ff29, type: 2}
-  recipeName: MEGAburger
+  - {fileID: 11400000, guid: 36e5e0c7432cc8c46968c84c3e795cc3, type: 2}
+  recipeName: Salad
