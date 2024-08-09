@@ -17,11 +17,14 @@ public class GameManager : MonoBehaviour
     private State state;
     private float waitingToStartTimer = 1f;
     private float countdownToStartTimer = 3f;
-    private float gamePlayingTimer = 10f;
+    private float gamePlayingTimer;
+    private float gamePlayingTimerMax = 10f;
     private void Awake()
     {
         Instance = this;
         state = State.WaitingToStart;
+        gamePlayingTimer = gamePlayingTimerMax;
+
     }
     private void Update()
     {
@@ -68,4 +71,12 @@ public class GameManager : MonoBehaviour
     {
         return countdownToStartTimer;
     }  
+    public bool IsGameOver()
+    {
+        return state == State.GameOver;
+    }
+    public float GetGamePlayingTimerNormalized()
+    {
+        return gamePlayingTimer / gamePlayingTimerMax;
+    }
 }
