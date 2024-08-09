@@ -26,7 +26,6 @@ public class DeliveryManagerUI : MonoBehaviour
     {
         UpdateVisual();
     }
-
     private void UpdateVisual()
     {
         foreach (Transform child in container)
