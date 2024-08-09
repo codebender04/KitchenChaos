@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
         Instance = this;
         state = State.WaitingToStart;
         gamePlayingTimer = gamePlayingTimerMax;
-
     }
     private void Update()
     {
