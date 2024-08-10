@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DeliveryManager : MonoBehaviour
+public class DeliveryManager : Singleton<DeliveryManager>
 {
 
     public event EventHandler OnRecipeSpawned;
     public event EventHandler OnRecipeCompleted;
     public event EventHandler OnRecipeSuccess;
     public event EventHandler OnRecipeFailed;
-    public static DeliveryManager Instance { get; private set; }
+
     [SerializeField] private RecipeListSO recipeListSO;
+
     private List<RecipeSO> waitingRecipeSOList;
     private float spawnRecipeTimer;
     private float spawnRecipeTimerMax = 4f;
@@ -20,7 +21,6 @@ public class DeliveryManager : MonoBehaviour
     private int successfulRecipesAmount;
     private void Awake()
     {
-        Instance = this;
         waitingRecipeSOList = new List<RecipeSO>();
     }
     private void Update()

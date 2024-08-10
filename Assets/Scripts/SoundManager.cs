@@ -19,7 +19,6 @@ public class SoundManager : MonoBehaviour
         BaseCounter.OnAnyObjectPlacedHere += BaseCounter_OnAnyObjectPlacedHere;
         TrashCounter.OnAnyObjectTrashed += TrashCounter_OnAnyObjectTrashed;
     }
-
     private void TrashCounter_OnAnyObjectTrashed(object sender, System.EventArgs e)
     {
         TrashCounter trashCounter = (TrashCounter)sender;

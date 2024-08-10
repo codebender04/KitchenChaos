@@ -6,7 +6,10 @@ using UnityEngine;
 public class CuttingCounter : BaseCounter, IHasProgress
 {
     public static event EventHandler OnAnyCut;
-
+    public static void ResetStaticData()
+    {
+        OnAnyCut = null;
+    }
     public event EventHandler OnCut;
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
     [SerializeField] private CuttingRecipeSO[] cuttingRecipeSOArray;
