@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -27,6 +28,7 @@ public class OptionsUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI interactAlternateText;
     [SerializeField] private TextMeshProUGUI pauseText;
     [SerializeField] private GameObject pressToRebindGameObject;
+    private Action onCloseButtonAction;
     private void Awake()
     {
         Instance = this;
@@ -43,6 +45,7 @@ public class OptionsUI : MonoBehaviour
         closeButton.onClick.AddListener(() =>
         {
             Hide();
+            onCloseButtonAction();
         });
         moveUpButton.onClick.AddListener(() => { RebindBinding(GameInput.Binding.MoveUp); });
         moveDownButton.onClick.AddListener(() => { RebindBinding(GameInput.Binding.MoveDown); });
@@ -78,8 +81,9 @@ public class OptionsUI : MonoBehaviour
         interactAlternateText.text = GameInput.Instance.GetBindingText(GameInput.Binding.InteractAlternate);
         pauseText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Pause);
     }
-    public void Show()
+    public void Show(Action onCloseButtonAction)
     {
+        this.onCloseButtonAction = onCloseButtonAction;
         gameObject.SetActive(true);
     }
     private void Hide()
