@@ -1,29 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Net.Sockets;
 using UnityEngine;
 
-public class PlayerSounds : MonoBehaviour
-{
+public class PlayerSounds : MonoBehaviour {
+
+
     private Player player;
-    private float footStepTimer;
-    private float footStepTimerMax = 0.1f;
-    private void Awake()
-    {
+    private float footstepTimer;
+    private float footstepTimerMax = .1f;
+
+
+    private void Awake() {
         player = GetComponent<Player>();
     }
-    private void Update()
-    {
-        footStepTimer -= Time.deltaTime;
-        if (footStepTimer < 0f)
-        {
-            footStepTimer = footStepTimerMax;
-            if (player.IsWalking())
-            {
+
+    private void Update() {
+        footstepTimer -= Time.deltaTime;
+        if (footstepTimer < 0f) {
+            footstepTimer = footstepTimerMax;
+
+            if (player.IsWalking()) {
                 float volume = 1f;
-                SoundManager.Instance.PlayFootstepsSound(transform.position, volume); 
+                SoundManager.Instance.PlayFootstepsSound(player.transform.position, volume);
             }
         }
     }
-
 }
